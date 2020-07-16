@@ -31,6 +31,10 @@ app.get('/lovegallery', (req, res) => {
   res.render('lovelovelove');
 });
 
+app.get('/video', (req, res) => {
+  res.render('video');
+});
+
 app.listen(PORT, () => {
   console.log(`Server is up on port ${PORT}`);
 });

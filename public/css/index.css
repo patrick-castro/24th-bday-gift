@@ -68,6 +68,95 @@ section h1 {
   padding: 0;
 }
 
+.amazing-reasons {
+  background-image: url('../img/amazing.jpg');
+  background-size: cover;
+  display: flex;
+}
+
+.love-gallery {
+  background-image: url('../img/love.jpg');
+  background-size: cover;
+  display: flex;
+}
+
+.video-gift {
+  background-image: url('../img/video-message.jpg');
+  background-size: cover;
+  display: flex;
+}
+
+.amazing-reasons-section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.box {
+  opacity: 0.9;
+  padding: 30px 50px 50px 50px;
+  border-radius: 7px;
+}
+
+.amazing-reasons .amazing-reasons-section .box {
+  background-color: #f48a36d4 !important;
+}
+
+.love-gallery .amazing-reasons-section .box {
+  background-color: #e54545f5 !important;
+}
+
+.video-gift .amazing-reasons-section .box {
+  background-color: #9f7464d9 !important;
+}
+
+.amazing-reasons .amazing-reasons-section .box button {
+  background: #ba6019d4;
+  color: white;
+}
+
+.love-gallery .amazing-reasons-section .box button {
+  background: #d11212bf;
+  color: white;
+}
+
+.video-gift .amazing-reasons-section .box button {
+  background: #6c4638cc;
+  color: white;
+}
+
+button {
+  margin: 30px 15px 15px 15px;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 2px solid #3f3e3e;
+  border-right: 2px solid #3f3e3e;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #dbdada;
+}
+
+.amazing-reasons .amazing-reasons-section .box button:hover {
+  background: #ac5510;
+}
+
+.love-gallery .amazing-reasons-section .box button:hover {
+  background: #c20202;
+}
+
+.video-gift .amazing-reasons-section .box button:hover {
+  background: #704333;
+}
+
 @keyframes bday-pic-load {
   0% {
     transform: translateY(-40px);
