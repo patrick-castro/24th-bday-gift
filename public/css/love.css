@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  color: #f73076;
+  height: 100vh;
+  overflow: hidden;
+  line-height: 1.6;
+  --bday-pic-load-delay: 500ms;
+  --bday-message-load-delay: 1200ms;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* CSS Smooth Scroll */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+
+  /* Scroll Snap */
+  scroll-snap-align: center;
+}
+
+/* 
+.bday-pic {
+  margin: 0 30px 0 30px;
+  animation: bday-pic-load 300ms ease-in var(--bday-pic-load-delay);
+  animation-fill-mode: forwards;
+  transform: translateY(-40px);
+  opacity: 0;
+}
+.bday-message {
+  font-family: 'Galada', cursive;
+  font-weight: 600;
+  font-size: 70px;
+  animation: bday-pic-load 300ms ease-in var(--bday-message-load-delay);
+  animation-fill-mode: forwards;
+  transform: translateY(-40px);
+  opacity: 0;
+} */
+.message-main {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.bday-message p {
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  display: flex;
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; */
+}
+
+.slide.current {
+  opacity: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.slide.current-2 {
+  opacity: 1;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.slide .content {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 20px;
+  opacity: 0;
+  width: 600px;
+  color: #333;
+  padding: 30px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.slide.current-2 .content {
+  opacity: 1;
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 40%;
+  right: 30px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.container-header {
+  background-image: linear-gradient(to bottom, #fcb9b2, #f9f9f9);
+}
+
+.container-header-message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
+/* Backgorund Images */
+
+.slide:first-child {
+  background: url('../img/1.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(2) {
+  background: url('../img/2.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(3) {
+  background: url('../img/3.jpg') no-repeat center top/cover;
+}
+
+.slide:nth-child(4) {
+  background: url('../img/4.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(5) {
+  background: url('../img/5.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(6) {
+  background: url('../img/6.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(7) {
+  background: url('../img/7.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(8) {
+  background: url('../img/8.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(9) {
+  background: url('../img/9.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(10) {
+  background: url('../img/10.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(11) {
+  background: url('../img/11.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(12) {
+  background: url('../img/12.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(13) {
+  background: url('../img/13.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(14) {
+  background: url('../img/14.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(15) {
+  background: url('../img/15.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(16) {
+  background: url('../img/16.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(17) {
+  background: url('../img/17.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(18) {
+  background: url('../img/18.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(19) {
+  background: url('../img/19.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(20) {
+  background: url('../img/20.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(21) {
+  background: url('../img/21.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(22) {
+  background: url('../img/22.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(23) {
+  background: url('../img/23.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(24) {
+  background: url('../img/24.jpg') no-repeat center center/cover;
+}
+
+@keyframes bday-pic-load {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
